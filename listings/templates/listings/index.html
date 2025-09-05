@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Home | RealEstateCo{% endblock %}
+
+{% block content %}
+  <!-- Hero -->
+  <div class="p-5 mb-4 bg-light rounded-3 text-center">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200" class="img-fluid rounded mb-3" alt="Property">
+    <h1 class="display-5 fw-bold">Find Your Dream Home</h1>
+    <p class="lead">Browse exclusive listings with our trusted consultant.</p>
+    <a href="{% url 'listings' %}" class="btn btn-primary btn-lg">View Listings</a>
+  </div>
+
+  <!-- About Consultant -->
+  <section id="about" class="my-5">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="https://via.placeholder.com/300" class="rounded-circle shadow-sm" alt="Consultant">
+      </div>
+      <div class="col-md-8">
+        <h2>About the Consultant</h2>
+        <p>
+          Meet <strong>John Doe</strong>, your trusted real estate consultant with 10+ years of experience
+          helping families find the perfect home. John specializes in premium properties and client-first service.
+        </p>
+        <a href="{% url 'about' %}" class="btn btn-outline-primary">Learn More</a>
+      </div>
+    </div>
+  </section>
+{% endblock %}
