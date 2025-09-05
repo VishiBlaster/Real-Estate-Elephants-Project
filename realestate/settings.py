@@ -13,7 +13,7 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
@@ -49,10 +49,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'realestate.urls'
 
-TEMPLATES =  [
+TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],   # leave empty unless you have a global templates/ folder
+        'DIRS': [],  # leave empty unless you have a global templates/ folder
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
